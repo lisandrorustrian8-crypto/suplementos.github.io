@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es ">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title >Gymclass</title>
+
+
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                  💪Gymclass
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">productos</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Nuestro Contacto</a>
+            </nav>
+            <button class="carrito-bn" onclick="mostrarcarrito()">
+                🛒 Carrito( <span id="cantidad-carrito">0</span>)
+            </button>
+        </header>
+        <main>
+            <section id="inicio" class="hero">
+                <div class="hero-contenido">
+                    <h1>Encuentra de los mejores suplementos que puedas desear </h1>
+
+                    <p>
+                        Los mejores suplementos estan disponibles en tu tienda favorita
+                    </p>
+
+                    <a href="#productos" class="boton">
+                        Ver productos
+                    </a>
+                </div>
+            </section>
+
+            <section id="productos" class="productos-seccion">
+                <h2>Nuestros productos</h2>
+                <p class="descripcion">
+                    Elige los suplementos que tus musculos necesitan 
+                </p>
+
+                <div class="busqueda">
+                    <input 
+                        type="text"
+                        id="buscador"
+                        placeholder="Buscar producto">
+                    
+                </div>
+                 
+                <div class="producto">
+                     <img src="https://farmacityar.vtexassets.com/arquivos/ids/275898-1600-auto?v=638877683379130000&width=1600&height=auto&aspect=true" alt="creatina ENA">
+                        <h3>Creatina ENA</h3>
+                        <p>Creatina ENA , monohidratada y de la mejor y mas alta calidad </p>
+                        <span class="precio">Q. 300.00</span>
+                        <button onclick="agregarCarrito('Creatina ENA',300 )">
+                            Agregar al carrito
+                        </button>
+                </div>
+
+                <div class="producto">
+                    <img src="https://m.media-amazon.com/images/I/71mx0sYCEXL._AC_SY300_SX300_QL70_ML2_.jpg" alt="Proteina Whey">
+                    <h3>Proteina Whey</h3>
+                    <p>Proteina de la mejor y mas alta calidad para dejar de ser un flacow</p>
+                    <span class="precio">Q.800.00</span>
+                    <button onclick="agregarCarrito('Proteina Whey,800')">
+                        Agregar al carrito
+                    </button>
+                </div>
+                 
+                <div class="producto">
+                      <img src="https://i5.walmartimages.com/asr/5c0e069e-5144-4d30-805d-56303e3d543c.04be4f48499d7e9f27441f7db6d79c68.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Proteina CBUM">
+                      <h3>Proteina CBUM</h3>
+                      <p>proteina de la calidad de un campeon.</p>
+                      <span class="Precio">Q. 1,200.00</span>
+                      <button onclick="agregarCarrito('Proteina CBUM,1200')">
+                        Agregar al carrito
+                         
+                      </button>
+                </div>
+                
+                <div class="producto">
+                     <img src="https://http2.mlstatic.com/D_NQ_NP_2X_656627-MLM83741839270_042025-F.webp" alt="Ronnie col">
+                     <h3>Ronnie coleman</h3>
+                     <p>Nuestros proveedores han traido a casa la creatina del olympia</p>
+                     <span class="Precio">Q. 400.00</span>
+                     <button onclick="agregarCarrito('Ronnie col,400')">
+                         Agregar al carrito
+                     </button>
+                </div>
+                 
+                <div class="producto">
+                     <img src="https://dojiw2m9tvv09.cloudfront.net/46246/product/X_psychotic-gold-orange2019.jpg?264&t=1790647532" alt="Pre-entreno psychotic">
+                     <h3>Pre entreno Psychotic</h3>
+                     <p>Un pre entreno para locos</p>
+                     <span class="Precio">Q.400.00</span>
+                     <button onclick="agregarCarrito('Pre entreno psychotic,400')">
+                         Agregar carrito
+                     </button>
+                </div>
+                <div class="producto">
+                    <img src="https://resources.sears.com.mx/medios-plazavip/t1/1719204641fruitjpg?scale=700&qlty=80" alt="Pre-entreno Hellboy">
+                    <h3>Hellboy</h3>
+                    <p>Para un entrenamiento de locos</p>
+                    <span class="Precio">Q.600.00</span>
+                    <button onclick="agregarcarrito('Pre-entreno hellboy,600')">
+                        Agregar carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="https://yaxa.co/_img/N5m056GnHpdciqL4esxzC4gbWdlXljLjl5s7x52cvL0/rs:fit:500:500:0/q:82/aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNjF2ejA5YWdPQUwuX0FDX1NMMTUwMF8uanBn.webp" alt="Aminoacidos EAAS">
+                    <h3>Aminoacidos EAAS</h3>
+                    <p>Tu mejor opcion para estimular de mejor manera tus musculos</p>
+                    <span class="Precio">Q1,000.00</span>
+                    <button onclick="agregarCarrito('Aminoacidos EAAS,1000')">
+                        Agregar carrito
+                    </button>
+                </div>
+                <div class="producto">
+                    <img src="https://www.health-shack.com/wp-content/uploads/2024/02/C4_Original_30serv_watermelon.jpg" alt="Pre-entreno C4">
+                    <h3>Pre-entreno C4</h3>
+                    <p>Un pre entreno que  te satisface con solo olerlo, el nuevo c4 ponche de frutas</p>
+                    <span class="Precio">Q800.00</span>
+                    <button onclick="agregarCarrito('Pre-entreno C4,800')">
+                        Agregar carrito
+                    </button>
+                </div>
+
+            </section>
+            <section id="nosotros" class="nosotros">
+                <h2>Sobre nosotros</h2>
+                <p>En Gymclass buscamos llenarte de lo que te mereces,
+                 amor propio, aqui encontraras  suplementos para crecer esteticamente 
+                 y de una manera muy efectiva
+                </p>
+                <p>Nuestro objetivo es ayudarte a encontrar el Potencial que llevas dentro
+            
+                </p>
+             </section>
+
+             <section id="contacto" class="contacto">
+                <h2>contactanos</h2>
+                <p> Guatemala, Guatemala</p>
+                <p> Telefono: 1234-5678</p>
+                <p>Correo: suplestore@gmail.com</p>
+             </section>
+        </main>
+
+    <footer> 
+         <p> Gymclass</p>
+            <p>© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="venta-carrito" class="carrito">
+        <div class="carrito-contenido">
+             
+            <span class="cerrar" onclick="cerrarCarrito()">times;</span>
+            <h2>Mi carrito</h2>
+
+            <div id="lista-carrito">
+                <p>tu carrito esta vacío</p>
+            </div>
+
+            <h3>
+                Total: Q. <span id="total-carrito">0.00</span>
+            </h3>
+
+            <button onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+        </div>
+    </div>
+
+    <script>
+          let carrito = [];
+            let total = 0;
+
+            function agregarCarrito(nombre, precio) {
+
+                carrito.push({
+                    nombre: nombre,
+                    precio: precio
+                });
+
+                total += precio;
+
+                document.getElementById("cantidad-carrito").textContent =
+                    carrito.length;
+
+                actualizarCarrito();
+
+                alert(nombre + " fue agregado al carrito.");
+            }
+
+            function actualizarCarrito() {
+
+                let lista = document.getElementById("lista-carrito");
+
+                lista.innerHTML = "";
+
+                if (carrito.length === 0) {
+                    lista.innerHTML = "<p>Tu carrito está vacío.</p>";
+                }
+
+                carrito.forEach(function(producto, indice) {
+
+                    let elemento = document.createElement("div");
+
+                    elemento.innerHTML =
+                        "<p>" +
+                        producto.nombre +
+                        " - Q. " +
+                        producto.precio.toFixed(2) +
+                        " <button onclick='eliminarProducto(" +
+                        indice +
+                        ")'>Eliminar</button></p>";
+
+                    lista.appendChild(elemento);
+
+                });
+
+                document.getElementById("total-carrito").textContent =
+                    total.toFixed(2);
+            }
+
+            function eliminarProducto(indice) {
+
+                total -= carrito[indice].precio;
+
+                carrito.splice(indice, 1);
+
+                document.getElementById("cantidad-carrito").textContent =
+                    carrito.length;
+
+                actualizarCarrito();
+            }
+
+            function mostrarcarrito() {
+
+                document.getElementById("ventana-carrito").style.display =
+                    "block";
+
+                actualizarCarrito();
+            }
+
+            function cerrarCarrito() {
+
+                document.getElementById("ventana-carrito").style.display =
+                    "none";
+            }
+
+            function finalizarCompra() {
+
+                if (carrito.length === 0) {
+
+                    alert("Tu carrito está vacío.");
+
+                } else {
+
+                    alert(
+                        "¡Gracias por tu compra! Total: Q. " +
+                        total.toFixed(2)
+                    );
+
+                    carrito = [];
+                    total = 0;
+
+                    document.getElementById("cantidad-carrito").textContent = 0;
+
+                    actualizarCarrito();
+                }
+            }
+
+            const buscador = document.getElementById("buscador");
+
+            buscador.addEventListener("keyup", function() {
+
+                let texto = buscador.value.toLowerCase();
+
+                let productos =
+                    document.querySelectorAll(".producto");
+
+                productos.forEach(function(producto) {
+
+                    let nombre =
+                        producto.querySelector("h3").textContent.toLowerCase();
+
+                    if (nombre.includes(texto)) {
+
+                        producto.style.display = "block";
+
+                    } else {
+
+                        producto.style.display = "none";
+
+                    }
+
+                });
+
+            });
+
+    </script>
+    </body>
+</html>
